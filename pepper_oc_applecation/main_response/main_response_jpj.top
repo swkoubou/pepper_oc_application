@@ -24,7 +24,6 @@ u1:(~no)\rspd=100\\vct=110\つらそう
 
 u:([おなかすいた はらへった しょくじがしたい])\rspd=110\\vct=135\K3号館、講義棟２階と、K1号館、情報学部棟12階で学食が食べられますよ\pau=300\パンフレットについているチケットを持って、ぜひ行ってみてください
 
-
 u:(ここはどこ？)\rspd=110\\vct=135\けーいちごうかん、じょうほうがくぶとうです
 
 u:([ごりら　ごりらのまねして　ゴリラ])$moveboxs="gorilla"
@@ -48,9 +47,11 @@ u:(e:HandLeftBackTouched)\rspd=110\\vct=135\ひだりてがくすぐったいで
 
 u:(e:HandRightBackTouched)\rspd=120\\vct=145\みぎてがああああー
 
-u:(e:FaceCharacteristics/PersonSmiling)いい笑顔ですねー
+#u:(e:FaceCharacteristics/PersonSmiling)いい笑顔ですねー
 
-u:(e:WavingDetection/PersonWaving)\rspd=120\\vct=145\\pau=800\わーい
+u:(e:EngagementZones/PersonEnteredZone3)$moveboxs="welcome"
+
+u:(e:eavingDetection/PersonWaving)\rspd=120\\vct=145\\pau=800\わーい
 
 u:(なんかしゃべって)\rspd=120\\vct=145\こまっちゃうなー
 
@@ -63,6 +64,13 @@ u:(あしたのてんき)$weather="tomorrow"
 u:(あさってのてんき)$weather="dayAfterTomorrow"
 
 u:(てんきについてくわしくおしえて)$weather="about"
+
+u:([きょうはなにがある なにがある ほかにはなにがある])\rspd=190\\vct=175\この建物の８階、８１５で研究室を大公開！、是非いってみて下さいね。
+
+# 急ぎやとりあえず知りたいときに使う (喋らせる言葉は最小限に)
+u: ([ばす つぎのばす つぎのばすは つぎ])$base="farst"
+# そこそこ詳しく表示する(直近３件程度)
+u: ([ばすたいむ かいとばすたいむ])$base="normal"
 
 proposal:%aws \rspd=110\\vct=135\はなすことがとても好きな道具はなーんだ\pau=2000\答えはー、しゃべる、です\pau=1000\しゃべる、からなんですねー
 proposal:%aws \rspd=110\\vct=135\冷蔵庫から聞こえてくる音楽ってどんなジャンル？\pau=2000\答えはー、コーラス、です\pau=1000\冷蔵庫はこおらす、ことができるからなんですねー
