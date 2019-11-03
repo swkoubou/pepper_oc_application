@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>詳しく天気</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" media="screen" href="./styles/main.css">
+	<link href="https://fonts.googleapis.com/css?family=M+PLUS+1p" rel="stylesheet">
+	<script src="/libs/qimessaging/2/qimessaging.js"></script>
+	<script src="./vconsole.min.js"></script>
+</head>
+
+<body>
+	<pre id="script">a</pre>
+	<img id="pepper" src="./img/pepper.png" alt="pepper">
+	<script type="text/javascript">
+		var vConsole = new VConsole();
+		var session = new QiSession();
+
+		function toTabletHandler(value) {
+			console.log("weather/scriptイベント発生: " + value);
+			document.getElementById("memory").innerHTML = value;
+		}
+
+		function startSubscribe() {
+			session.service("ALMemory").done(function (ALMemory) {
+				console.log("ALMemory取得成功");
+				ALMemory.subscriber("weather/script").done(function (subscriber) {
+					subscriber.signal.connect(toTabletHandler);
+				});
+			});
+		}
+
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+h2 {
+    font-size: 65px;
+}
+
+h3 {
+    font-size: 43px;
+}
+
+img {
+    width: 600px;
+}
+
+#time1 {
+    position: absolute;
+    top: 280px;
+    left: 230px;
+}
+
+#destination1 {
+    position: absolute;
+    top: 360px;
+    left: 230px;
+}
+
+.bus1 {
+    position: absolute;
+    top: 105px;
+    left: 600px;
+    opacity: 0.4;
+}
+
+#bustype1 {
+    position: absolute;
+    top: 335px;
+    left: 870px;
+    font-size: 60px;
+}
+
+#time2 {
+    position: absolute;
+    top: 670px;
+    left: 230px;
+}
+
+#destination2 {
+    position: absolute;
+    top: 750px;
+    left: 230px;
+}
+
+.bus2 {
+    position: absolute;
+    top: 500px;
+    left: 600px;
+    opacity: 0.4;
+}
+
+#bustype2 {
+    position: absolute;
+    top: 725px;
+    left: 870px;
+    font-size: 60px;
+}

@@ -2,6 +2,7 @@
 <package uuid="pepper_oc_applecation-e2d501" version="0.0.0">
  <names>
   <name lang="en_US">Untitled</name>
+  <name lang="ja_JP">pepper_oc_applecation</name>
  </names>
  <supportedLanguages>
   <language>ja_JP</language>
@@ -15,5 +16,8 @@
    <nature>interactive</nature>
    <permissions/>
   </behaviorContent>
+  <dialogContent typeVersion="1.0" topicName="main_response">
+   <topic language="ja_JP" path="main_response/main_response_jpj.top"/>
+  </dialogContent>
  </contents>
 </package>

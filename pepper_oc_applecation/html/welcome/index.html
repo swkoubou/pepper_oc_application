@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>welcome</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" media="screen" href="./styles/main.css">
+	<link href="https://fonts.googleapis.com/css?family=M+PLUS+1p" rel="stylesheet">
+	<script src="https://unpkg.com/dayjs"></script>
+</head>
+
+<body>
+	<h3 id="clock"></h3>
+	<h1 id="title">ソフトウェア工房へようこそ</h1>
+	<div id="inviteBlog">
+		<h2 id="inviteBlog-title">ソフトウェア工房ブログ更新中！</h2>
+		<img id="qrcode"
+			src="https://chart.apis.google.com/chart?chs=160x160&cht=qr&chl=https://koubou.cs.kanagawa-it.ac.jp/"
+			alt="QRcode">
+	</div>
+	<img id="pepper" src="./img/pepper.png" alt="pepper">
+
+	<script type="text/javascript">
+		function showTime() {
+			document.getElementById('clock').innerHTML = dayjs().format('HH:mm');
+		};
+		showTime();
+		setInterval(showTime, 1000);
+
+	</script>
+</body>
+
+</html>
